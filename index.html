@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Julie Cutie ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      margin:0;
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: radial-gradient(circle at top, #ff9a9e, #fad0c4);
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .card{
+      background:#fff;
+      padding:32px 26px;
+      border-radius:22px;
+      text-align:center;
+      box-shadow:0 15px 35px rgba(0,0,0,.2);
+      max-width:360px;
+      width:92%;
+      position:relative;
+    }
+    .heart{
+      position:absolute;
+      top:-22px;
+      left:50%;
+      transform:translateX(-50%);
+      background:#ff4d6d;
+      color:#fff;
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:22px;
+      box-shadow:0 8px 20px rgba(0,0,0,.25);
+    }
+    h1{
+      margin-top:20px;
+      color:#ff4d6d;
+      font-size:22px;
+    }
+    h2{
+      color:#333;
+      font-size:20px;
+      margin:12px 0 18px;
+    }
+    p{
+      color:#555;
+      font-size:14.5px;
+      margin-bottom:22px;
+      line-height:1.5;
+    }
+    .name{
+      color:#ff4d6d;
+      font-weight:600;
+    }
+    .btn{
+      padding:12px 26px;
+      margin:6px;
+      border:none;
+      border-radius:26px;
+      font-size:16px;
+      cursor:pointer;
+    }
+    .yes{
+      background:#ff4d6d;
+      color:#fff;
+      box-shadow:0 8px 18px rgba(255,77,109,.45);
+    }
+    .no{
+      background:#eee;
+      color:#999;
+      cursor:not-allowed;
+    }
+    .result{
+      margin-top:18px;
+      font-size:18px;
+      color:#ff4d6d;
+      display:none;
+    }
+    .footer{
+      margin-top:14px;
+      font-size:12px;
+      color:#888;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="heart">❤️</div>
+
+    <h1>Hey <span class="name">Juliet Fernandez</span></h1>
+    <p>
+      For my <b>Julie Cutie</b> 💕<br>
+      No pressure, no expectations.<br>
+      Bas dil se pooch raha hoon.
+    </p>
+
+    <h2>Will you be my <br>Girlfriend / Valentine? 🌹</h2>
+
+    <button class="btn yes" onclick="yesClick()">Yes 💖</button>
+    <button class="btn no" disabled>No</button>
+
+    <div class="result" id="result">
+      You just made my heart smile 💞
+    </div>
+
+    <div class="footer">— always yours ❤️</div>
+  </div>
+
+  <script>
+    function yesClick(){
+      document.getElementById('result').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
