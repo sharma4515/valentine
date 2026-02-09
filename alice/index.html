@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Valentine for Alice</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:'Segoe UI', Arial, sans-serif;
+
+  /* Pink background */
+  background:linear-gradient(135deg,#ffdde1,#ee9ca7);
+  position:relative;
+  overflow:hidden;
+}
+
+/* Heart watermark */
+body::before{
+  content:"❤️ 💖 ❤️ 💖 ❤️ 💖 ❤️ 💖";
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%) rotate(-15deg);
+  font-size:64px;
+  opacity:0.08;           /* very light watermark */
+  white-space:nowrap;
+  pointer-events:none;
+}
+
+.card{
+  background:#fff;
+  padding:32px 26px;
+  border-radius:22px;
+  text-align:center;
+  box-shadow:0 18px 35px rgba(0,0,0,0.2);
+  max-width:330px;
+  z-index:1;
+}
+
+.sparkle{
+  font-size:36px;
+  animation:float 2s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-8px);}
+}
+
+.name{
+  color:#ff4d6d;
+  font-weight:700;
+}
+
+.btn{
+  padding:12px 28px;
+  margin:6px;
+  border:none;
+  border-radius:26px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.yes{
+  background:#ff4d6d;
+  color:#fff;
+  box-shadow:0 8px 18px rgba(255,77,109,.45);
+}
+
+.no{
+  background:#eee;
+  color:#999;
+  cursor:not-allowed;
+}
+
+.result{
+  margin-top:18px;
+  font-size:18px;
+  color:#ff4d6d;
+  display:none;
+}
+
+.footer{
+  margin-top:14px;
+  font-size:12px;
+  color:#888;
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+
+  <div class="sparkle">💖</div>
+
+  <h1>Hey <span class="name">Alice Saini</span></h1>
+
+  <p style="font-size:20px; font-weight:600; color:#ff4d6d;">
+    Beautiful Soul Aalu 🥔
+  </p>
+
+  <p style="font-size:24px; margin-top:10px;">
+    ⭐ 🌙 ⭐
+  </p>
+
+  <p style="font-size:14px; color:#777; margin-top:12px;">
+    — Yours, Mr. M. Sharma
+  </p>
+
+  <h2>Will you be my <br>Valentine? 💕</h2>
+
+  <button class="btn yes" onclick="yesClick()">Yes 💖</button>
+  <button class="btn no" disabled>No</button>
+
+  <div class="result" id="result">
+    Alice, you just made my world brighter ✨
+  </div>
+
+  <div class="footer">— forever thinking of you 💖</div>
+
+</div>
+
+<script>
+function yesClick(){
+  document.getElementById('result').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
